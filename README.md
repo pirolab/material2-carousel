@@ -1,14 +1,20 @@
 # Material Carousel
-[![Build Status](https://travis-ci.org/gbrlsnchs/material2-carousel.svg?branch=master)](https://travis-ci.org/gbrlsnchs/material2-carousel)
-[![npm version](https://badge.fury.io/js/%40ngmodule%2Fmaterial-carousel.svg)](https://badge.fury.io/js/%40ngmodule%2Fmaterial-carousel)
-[![Live demo](https://img.shields.io/badge/demo-blue.svg)](https://gbrlsnchs.github.io/material2-carousel/)
+[![Build Status](https://travis-ci.org/gabrielbusarello/material2-carousel.svg?branch=master)](https://travis-ci.org/gabrielbusarello/material2-carousel)
+[![npm version](https://badge.fury.io/js/%40ngbmodule%2Fmaterial-carousel.svg)](https://badge.fury.io/js/%40ngbmodule%2Fmaterial-carousel)
+[![Live demo](https://img.shields.io/badge/demo-blue.svg)](https://gabrielbusarello.github.io/material2-carousel/)
+
+[![Material2 Carousel](./projects/demo/src/assets/Biglogo.png)](https://github.com/gabrielbusarello/material2-carousel)
 
 ## NOTICE
-I no longer use Angular. By not using Angular anymore, it means I no longer use this component, what prevents me from pushing quality commits, doing assertive code reviews and being up-to-date with new Angular releases. I don't do open source for stars, I do to help people, so I don't want people that depend on this component to have a bad support.
+Hi guys, how are you?
 
-That said, for the sake of the community, I suggest you to use [this fork](https://github.com/gabrielbusarello/material2-carousel) instead (thanks [gabrielbusarello](https://github.com/gabrielbusarello)!). There are a bunch of small issues to be solved and also some major ones but I'm sure someone actively using Angular will handle them with ease.
+I'm Gabriel Busarello, and I forked this project, because it have some nice features.
 
-Thanks for the support and take care!
+The first author of this project is [Gabriel Sanches](https://github.com/gbrlsnchs), and he archived this awesome project, because he don't use Angular anymore. But I will very happy to can help de Open Source community.
+
+I want to help the community, and if you have some feature or issue, please contributte to this project. I will really appreciate that!
+
+Thank you!
 
 ## About
 This package is a carousel component for Angular using Material Design.
@@ -16,12 +22,12 @@ This package is a carousel component for Angular using Material Design.
 Until `v1` is reached, breaking changes may be introduced.
 
 ### Installing
-`npm install --save @ngmodule/material-carousel`
+`npm install --save @ngbmodule/material-carousel`
 
 ### Importing
 ```typescript
 //...
-import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { MatCarouselModule } from '@ngbmodule/material-carousel';
 
 @NgModule({
   // ...
@@ -37,7 +43,7 @@ export class AppModule {}
 ## Usage
 ### `MatCarouselComponent`
 ```typescript
-import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
+import { MatCarousel, MatCarouselComponent } from '@ngbmodule/material-carousel';
 ```
 ```html
 <mat-carousel>
@@ -51,18 +57,26 @@ import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 | `autoplay`            | `boolean`          | Enable automatic sliding.                                                  | `true`            |
 | `interval`            | `number`           | Autoplay's interval in milliseconds.                                       | `5000`            |
 | `loop`                | `boolean`          | Enable loop through arrows.                                                | `true`            |
-| `hideArrows`          | `boolean`          | Hide navigation arrows.                                                    | `false`           |
-| `hideIndicators`      | `boolean`          | Hide navigation indicators.                                                | `false`           |
+| `hideArrows`          | `boolean`          | Hide navigation arrows.                                                    | `true`            |
+| `hideIndicators`      | `boolean`          | Hide navigation indicators.                                                | `true`            |
 | `color`               | `ThemePalette`     | Color palette from Material.                                               | `'accent'`        |
 | `maxWidth`            | `string`           | Maximum width.                                                             | `'auto'`          |
 | `maintainAspectRatio` | `boolean`          | If true, use `proportion` to determine height, else `slideHeight` is used. | `true`            |
 | `proportion`          | `number`           | Height proportion compared to width.                                       | `25`              |
 | `slideHeight`         | `string`           | Explicit slide height. Used when maintainAspectRatio is false.             | `'100%'`          |
 | `slides`              | `number`           | Maximum amount of displayed slides.                                        |                   |
-| `useKeyboard`         | `boolean`          | Enable keyboard navigation.                                                | `true`            |
+| `useKeyboard`         | `boolean`          | Enable keyboard navigation.                                                | `false`           |
 | `useMouseWheel`       | `boolean`          | Enable navigation through mouse wheeling.                                  | `false`           |
 | `orientation`         | `Orientation`      | Orientation of the sliding panel.                                          | `'ltr'`           |
 | `svgIconOverrides`    | `SvgIconOverrides` | Override default carousel icons with registered SVG icons.                 |                   |
+| `pauseOnHover`        | `boolean`          | Override default pause on hover.                                           | `true`            |
+
+
+| Output                |  Type              | Description                                                                |
+| --------------------- | ------------------ | -------------------------------------------------------------------------- |
+| `animationStart`      | `number`           | It emits the currentIndex when animation starts                            |
+| `change`              | `number`           | It emtis the currentIndex when animation ends                              |
+
 
 #### Size Considerations and Recommendations
 By default, `maintainAspectRatio` is true, which means height is controlled through `proportion`.
@@ -71,7 +85,7 @@ If you want to have a carousel with constant height (regardless of width), you m
 
 By default, `slideHeight` is set to `100%`, which will not work if the parent element height isn't defined (i.e. relative heights do not work if the parent height is `auto`). In that case you could pass a valid css string for `slideHeight`. You can use any valid css height string like `100px` or `25vh`.
 
-Play around with the [demo](https://gbrlsnchs.github.io/material2-carousel/) to see how you can use this carousel with or without explicit parent height.
+Play around with the [demo](https://gabrielbusarello.github.io/material2-carousel/) to see how you can use this carousel with or without explicit parent height.
 
 **With parent elements that have height:auto**
 * use `proportion` if you want a carousel that resizes responsively (this is the default configuration).
@@ -85,7 +99,7 @@ Play around with the [demo](https://gbrlsnchs.github.io/material2-carousel/) to 
 
 ### `MatCarouselSlideComponent`
 ```typescript
-import { MatCarouselSlide, MatCarouselSlideComponent } from '@ngmodule/material-carousel';
+import { MatCarouselSlide, MatCarouselSlideComponent } from '@ngbmodule/material-carousel';
 ```
 ```html
 <mat-carousel>
@@ -104,8 +118,8 @@ import { MatCarouselSlide, MatCarouselSlideComponent } from '@ngmodule/material-
 
 ## Contributing
 ### How to help
-- For bugs and opinions, please [open an issue](https://github.com/gbrlsnchs/material2-carousel/issues/new)
-- For pushing changes, please [open a pull request](https://github.com/gbrlsnchs/material2-carousel/compare)
+- For bugs and opinions, please [open an issue](https://github.com/gabrielbusarello/material2-carousel/issues/new)
+- For pushing changes, please [open a pull request](https://github.com/gabrielbusarello/material2-carousel/compare)
 
 ### How to develop and test
 #### Testing
