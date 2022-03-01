@@ -3,15 +3,15 @@
   "_id": "@ngbmodule/material-carousel@0.7.2",
   "_inBundle": false,
   "_integrity": "sha512-ubIYq7VgnuajKMlEv+OrnIzZgyo3Es8dIk76pGJNfsBZaIeVtfgZi85gDydnzyj1uDbAzpMfFw0vvzf7ve22SA==",
-  "_location": "/@ngbmodule/material-carousel",
+  "_location": "material2-carousel",
   "_phantomChildren": {},
   "_requested": {
     "type": "tag",
     "registry": true,
-    "raw": "@ngbmodule/material-carousel",
-    "name": "@ngbmodule/material-carousel",
-    "escapedName": "@ngbmodule%2fmaterial-carousel",
-    "scope": "@ngbmodule",
+    "raw": "material2-carousel",
+    "name": "material2-carousel",
+    "escapedName": "material2-carousel",
+    "scope": "",
     "rawSpec": "",
     "saveSpec": null,
     "fetchSpec": "latest"
@@ -20,9 +20,9 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@ngbmodule/material-carousel/-/material-carousel-0.7.2.tgz",
+  "_resolved": "https://github.com/pirolab/material2-carousel/archive/refs/heads/master.zip",
   "_shasum": "74477490d945aa62db3e986f119484dc93eb6db6",
-  "_spec": "@ngbmodule/material-carousel",
+  "_spec": "material2-carousel",
   "_where": "C:\\Users\\admin\\IdeaProjects\\test_angular",
   "author": {
     "name": "Gabriel Busarello",
@@ -55,12 +55,7 @@
   "metadata": "ngbmodule-material-carousel.metadata.json",
   "module_ivy_ngcc": "__ivy_ngcc__/fesm2015/ngbmodule-material-carousel.js",
   "module": "fesm2015/ngbmodule-material-carousel.js",
-  "name": "@ngbmodule/material-carousel",
-  "peerDependencies": {
-    "@angular/material": "^10.0.1",
-    "hammerjs": "^2.0.8",
-    "rxjs": "~6.6.0"
-  },
+  "name": "material2-carousel",
   "publishConfig": {
     "access": "public"
   },
